@@ -7,7 +7,10 @@
     "clean": "rimraf dist",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
-    "start": "npm run clean && node devServer.js"
+    "start": "npm run clean && node devServer.js",
+    "test": "mocha --compilers js:babel-core/register",
+    "testing": "babel-node node_modules/mocha/bin/_mocha -- testing/*.js",
+    "coverage": "babel-node node_modules/isparta/bin/isparta cover  --include-all-sources --report html node_modules/mocha/bin/_mocha -- test/*.js"
   },
   "repository": {
     "type": "git",
@@ -49,6 +52,7 @@
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
+    "babel-cli": "^6.11.4",
     "babel-core": "^6.5.2",
     "babel-eslint": "^5.0.0-beta10",
     "babel-loader": "^6.2.2",
@@ -59,6 +63,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.5.2",
     "body-parser": "^1.14.1",
+    "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.1",
@@ -70,6 +75,10 @@
     "express-session": "^1.11.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.4",
+    "isparta": "^4.0.0",
+    "isparta-instrumenter-loader": "^1.0.1",
+    "istanbul": "^0.4.4",
+    "mocha": "^3.0.0",
     "node-sass": "^3.3.3",
     "redux-devtools": "^3.1.1",
     "redux-devtools-dock-monitor": "^1.0.1",
