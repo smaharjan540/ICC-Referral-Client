@@ -40,7 +40,7 @@ export default function userReducer (state = initialReferralState, action) {
   return Object.assign({}, state, reduceFn(state, action))
 }
 
-const ROOT_URL = 'http://localhost:8080/EnterpriseArchitecture/api';
+const ROOT_URL = 'http://localhost:8080/ICC-Referral-Server/api';
 export function loadRecruiters() {
    console.log('LOAD_RECRUITERS action...');
    const request = axios({
@@ -59,6 +59,6 @@ export function addConsultant (consultant) {
 
   return {
     type: [ADD_CONSULTANT],
-    payload: axios.post('http://localhost:8080/EnterpriseArchitecture/api/consultant/add', consultant)
+    payload: axios.post('http://localhost:8080/ICC-Referral-Server/api/consultant/add', consultant)
   }
 }

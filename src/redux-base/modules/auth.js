@@ -95,7 +95,7 @@ export function login(username, password) {
   return {
     types: [LOGIN, LOGIN_SUCCESS, LOGIN_FAIL],
     promise: axios
-      .post('http://localhost:8080/EnterpriseArchitecture/api/login', {username, password})
+      .post('http://localhost:8080/ICC-Referral-Server/api/login', {username, password})
   };
 }
 
@@ -103,6 +103,6 @@ export function logout(username) {
   return {
     types: [LOGOUT, LOGOUT_SUCCESS, LOGOUT_FAIL],
     promise: axios
-      .post('http://localhost:8080/EnterpriseArchitecture/api/logout', { username })
+      .post('http://localhost:8080/ICC-Referral-Server/api/logout', { username })
   };
 }

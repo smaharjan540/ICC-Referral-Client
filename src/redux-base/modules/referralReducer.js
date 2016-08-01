@@ -139,8 +139,8 @@ export function searchReferrals (search) {
   }
 }
 
-const ROOT_URL = 'http://localhost:8080/EnterpriseArchitecture';
-const REFERRAL_URL = 'http://localhost:8080/EnterpriseArchitecture/referral';
+const ROOT_URL = 'http://localhost:8080/ICC-Referral-Server';
+const REFERRAL_URL = 'http://localhost:8080/ICC-Referral-Server/referral';
 export function load(userId) {
    console.log('LOAD_REFERRAL action...');
    const request = axios({
@@ -202,7 +202,7 @@ export function deleteReferral (id) {
 export function requestUpdate(referral){
     return {
         type: [UPDATE_REFERRAL],
-        payload: axios.put('http://localhost:8080/EnterpriseArchitecture/api/recruiter/referral', referral)
+        payload: axios.put('http://localhost:8080/ICC-Referral-Server/api/recruiter/referral', referral)
     }
 }
 
@@ -212,7 +212,7 @@ export function addReferral (referral) {
 
   return {
     type: [ADD_REFERRAL],
-    payload: axios.post('http://localhost:8080/EnterpriseArchitecture/referral/', referral)
+    payload: axios.post('http://localhost:8080/ICC-Referral-Server/referral/', referral)
   }
 }
 
@@ -222,7 +222,7 @@ export function upload(file) {
 
     return {
         type: UPLOAD,
-        payload: axios.post('http://localhost:8080/EnterpriseArchitecture/referral/upload', data)
+        payload: axios.post('http://localhost:8080/ICC-Referral-Server/referral/upload', data)
     }
 }
 
