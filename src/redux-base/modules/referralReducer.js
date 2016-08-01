@@ -30,7 +30,7 @@ const initialReferralState = {
   resource: null,
   addMessage: null
 };
-
+// --------------------------- Reducer function --------------------------
 const actionsMap = {
   [LOAD_REFERRAL]: (state) => {
     console.log('LOAD_REFERRAL  reducer 1...');
@@ -139,6 +139,7 @@ export function searchReferrals (search) {
   }
 }
 
+// --------------------------- Action functions --------------------------
 const ROOT_URL = 'http://localhost:8080/ICC-Referral-Server';
 const REFERRAL_URL = 'http://localhost:8080/ICC-Referral-Server/referral';
 export function load(userId) {

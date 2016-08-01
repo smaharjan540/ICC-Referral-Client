@@ -50,7 +50,7 @@ export default class ReferralDetails extends Component {
 
   render() {
     const referral = this.props.referral ? this.props.referral : {};
-    const resumeurl = referral.resumefile ? 'http://localhost:8080/EnterpriseArchitecture/resources/'.concat(referral.resumefile):'';
+    const resumeurl = referral.resumefile ? 'http://localhost:8080/ICC-Referral-Server/resources/'.concat(referral.resumefile):'';
     const notificationOptions = ['Looks good, will follow up', 'No current openings, will follow up once something comes available','Not selected, please notify your referral','Moving Forward', 'Remind Me', 'Associate Program'];
     return (
         <div className="container">

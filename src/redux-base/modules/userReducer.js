@@ -9,6 +9,7 @@ const initialReferralState = {
     recruiters: []
 };
 
+// --------------------------- Reducer function --------------------------
 const actionsMap = {
   [LOAD_RECRUITERS]: (state) => {
     console.log('LOAD_RECRUITERS reducer 1...');
@@ -40,6 +41,7 @@ export default function userReducer (state = initialReferralState, action) {
   return Object.assign({}, state, reduceFn(state, action))
 }
 
+// --------------------------- Action functions --------------------------
 const ROOT_URL = 'http://localhost:8080/ICC-Referral-Server/api';
 export function loadRecruiters() {
    console.log('LOAD_RECRUITERS action...');

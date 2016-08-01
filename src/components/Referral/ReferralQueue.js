@@ -25,7 +25,7 @@ export default class ReferralQueue extends Component {
       visible: true
     },
     {
-      columnName: 'status',
+      columnName: 'recruiterstatus',
       displayName: 'Submission Status',
       locked: false,
       visible: true
@@ -100,7 +100,7 @@ export default class ReferralQueue extends Component {
               <div className="panel panel-default">
                   <Row>
                       <section className="main">
-                        <Griddle resultsPerPage={10} showFilter={true} useGriddleStyles={true} previousText="<< Previous" nextText='Next >>' results={filteredItems} columns={['name', 'skill', 'status', 'createdate', 'id']} columnMetadata={this.columnMeta}/>
+                        <Griddle resultsPerPage={10} showFilter={true} useGriddleStyles={true} previousText="<< Previous" nextText='Next >>' results={filteredItems} columns={['name', 'skill', 'recruiterstatus', 'createdate', 'id']} columnMetadata={this.columnMeta}/>
                       </section>
                   </Row>
               </div>

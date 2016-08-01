@@ -75,22 +75,7 @@ export default function auth(state = initialState, action = {}) {
 }
 
 // --------------------------- Action functions --------------------------
-
-//Access-Control-Allow-Credentials...true
-//Access-Control-Allow-Origin...http://localhost:5000
 export function login(username, password) {
-
-  /*var http = new XMLHttpRequest();
-  var params = "username=".concat(username).concat('&password=').concat(password);
-  http.open("POST", "http://localhost:8080/EnterpriseArchitecture/login", true);
-  http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-  http.onreadystatechange = function() {//Call a function when the state changes.
-      if(http.readyState == 4 && http.status == 200) {
-          alert(http.responseText);
-      }
-  }
-  http.send(params);*/
   console.log("LOGIN Action...");
   return {
     types: [LOGIN, LOGIN_SUCCESS, LOGIN_FAIL],
